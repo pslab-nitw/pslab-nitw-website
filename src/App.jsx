@@ -59,7 +59,7 @@ function App() {
   }
 
   return (
-    <div>
+    <div className="outer-container">
       <NavBar handleItemClick={handleTabClick} tabno={tabNo} publicationFilter={publicationFilter} />
       {renderComponent()}
       <Footer />

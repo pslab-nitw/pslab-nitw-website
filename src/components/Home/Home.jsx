@@ -1,4 +1,3 @@
-import React from "react";
 import Carousel from "./Carousel";
 function Home() {
   return (
@@ -19,6 +18,9 @@ function Home() {
         </p>
       </div>
       <div className="mentor-description">
+        <div className="right">
+          <img src="https://static.wixstatic.com/media/b862f1_c3887d80de1d4e33882b4ee268786659~mv2.jpg/v1/fill/w_504,h_418,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/bt-ps_edited_edited.jpg" />
+        </div>
         <div className="left">
           <h2 className="sub-title">Meet the Mentor</h2>
           <h1 className="title">Prof. Prakash Saudagar</h1>
@@ -32,9 +34,6 @@ function Home() {
             identifying novel drug targets and developing therapeutic strategies
             against parasitic infections.
           </p>
-        </div>
-        <div className="right">
-          <img src="https://static.wixstatic.com/media/b862f1_c3887d80de1d4e33882b4ee268786659~mv2.jpg/v1/fill/w_504,h_418,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/bt-ps_edited_edited.jpg" />
         </div>
       </div>
     </div>

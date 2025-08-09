@@ -24,7 +24,7 @@ function Alumni() {
       </div>
       <div className="flex-container-2">
         {PGList.map((item, index) => (
-          <p>{item.name} - {item.branch} - batch of {item.year}</p>
+          <p key={index}>{item.name} - {item.branch} - batch of {item.year}</p>
         ))}
       </div>
       <div className="title">
@@ -32,7 +32,7 @@ function Alumni() {
       </div>
       <div className="flex-container-2">
         {UGList.map((item, index) => (
-          <p>{item.name} - {item.branch} - batch of {item.year}</p>
+          <p key={index}>{item.name} - {item.branch} - batch of {item.year}</p>
         ))}
       </div>
     </div>

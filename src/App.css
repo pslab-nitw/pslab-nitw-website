@@ -34,7 +34,6 @@ body {
 }
 html, body {
   overscroll-behavior: none;
-  overflow-x: hidden;
 }
 
 #root {
@@ -43,6 +42,10 @@ html, body {
 .tabs {
   animation-name: fadeIn;
   animation-duration: 0.5s;
+}
+.outer-container{
+  width: fit-content;
+  margin: auto auto;
 }
 .header {
   width: 90vw;
@@ -89,6 +92,9 @@ html, body {
   cursor: pointer;
 }
 .fab-button {
+  position: fixed;
+  right: 5vw;
+  top: 5vh;
   animation-duration: 0.5s;
 }
 .menu {
@@ -97,10 +103,17 @@ html, body {
   position: fixed;
   top: 0;
   right: 0;
-  flex: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  height: 1000vh;
   animation-name: slideInToLeft;
   animation-duration: 0.5s;
-  overflow-y: scroll;
+}
+.scrollable-menu {
+  max-height: 100vh;
+  overflow-y: auto;
+  overscroll-behavior: contain;
 }
 .menu-list {
   z-index: 5;
@@ -124,7 +137,7 @@ html, body {
   position: fixed;
   top: 0;
   right: 0;
-  height: 100vh;
+  height: 10000vh;
   width: 100vw;
   background-color: grey;
   opacity: 50%;
@@ -132,7 +145,8 @@ html, body {
 
 .details {
   display: flex;
-  width: 100vw;
+  width: 99vw;
+  min-height: fit-content;
 }
 .details * {
   text-align: center;
@@ -145,7 +159,7 @@ html, body {
   flex-direction: column;
   justify-content: flex-start;
   flex: 1;
-  height: 270px;
+  min-height: 270px;
   background-color: black;
   padding-top: 50px;
 }
@@ -181,12 +195,14 @@ html, body {
   opacity: 0.7;
   margin: 0;
   margin-bottom: 50px;
+  text-align: center;
 }
 .home > .carousel {
   display: flex;
   width: 80vw;
   height: 600px;
 }
+
 .carousel div {
   background-color: white;
   height: 600px;
@@ -202,6 +218,15 @@ html, body {
   width: 300%;
   height: 100%;
   display: flex;
+}
+@media(max-width:1200px) {
+  .carousel{
+    display: flex;
+    flex-direction: column;
+  }
+  .carousel div {
+    height: 300px;
+  }
 }
 .images > .left {
   width: 0;
@@ -360,7 +385,7 @@ html, body {
   justify-content: center;
   align-items: center;
   margin-top: 50px;
-  height: 300px;
+  min-height: 300px;
   background-color: white;
   width: 80vw;
   border-radius: 20px;
@@ -379,12 +404,22 @@ html, body {
 }
 .mentor-description {
   display: flex;
+  flex-direction: row-reverse;
   width: 80vw;
   margin-top: 50px;
   margin-bottom: 100px;
   padding: 20px 0;
   padding-right: 10px;
   background: darkcyan;
+}
+@media (max-width:930px) {
+  .mentor-description{
+    display: flex;
+    flex-wrap:wrap;
+    flex-direction: column;
+    align-items: center;
+  }
+  
 }
 .mentor-description > .left {
   display: flex;
@@ -407,7 +442,7 @@ html, body {
   }
 }
 .mentor-description img {
-  height: 380px;
+  height: 30vw;
   animation-name: profileanimation;
   animation-duration: 2s;
 }
@@ -453,6 +488,12 @@ html, body {
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   border-right: 5px solid rgba(255, 255, 255, 0.3);
   border-bottom: 5px solid rgba(255, 255, 255, 0.3);
+}
+@media(max-width:1000px) {
+  .card-container{
+    min-height: 20vh;
+    width: 40vw;
+  }
 }
 .img-container {
   width: 40%;
