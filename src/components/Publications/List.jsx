@@ -1,6 +1,6 @@
 const List = [
   {
-    year: "2025",
+    year: "2025 - ",
     publications: [
       {
         title: "In-vitro biomineralization study of eco-friendly synthesized borosilicate glass with strontium oxide as dopant", 
