@@ -1,5 +1,15 @@
-import React from "react";
 const List = [
+  {
+    year: "2025",
+    publications: [
+      {
+        title: "In-vitro biomineralization study of eco-friendly synthesized borosilicate glass with strontium oxide as dopant", 
+        authors: "Satish Jain, Md Monirujjaman, Locherla Daloji, Raghavendra Gujjala, P Abdul Azeem, Raj Kumar Samudrala, Prakash Saudagar, Shakuntala Ojha",
+        source: "Ceramics International",
+        link: "https://www.sciencedirect.com/science/article/pii/S0272884225006595",
+      },
+    ],
+  },
   {
     year: "2024",
     publications: [
@@ -379,11 +389,11 @@ export default List;
     [
         {
             year:required_year,
-            pubications:[
+            publications:[
                 {
                     title: title_of_publication,
                     authors: authors_of_publication,
-                    soure: sorce_of_publication,
+                    source: sorce_of_publication,
                     link: url_to_the_source,
                 },
                 ...
