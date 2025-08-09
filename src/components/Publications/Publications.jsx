@@ -1,7 +1,20 @@
 import React from "react";
 import YearlyPublications from "./YearlyPublications";
 import List from "./List";
+import Submenu2 from "./Submenu2";
+import Submenu3 from "./Submenu3";
+import Submenu4 from "./Submenu4";
 function Publications({ filter = "ALL" }) {
+  if (filter === "SUBMENU_2") {
+    return <Submenu2 />;
+  }
+  if (filter === "SUBMENU_3") {
+    return <Submenu3 />;
+  }
+  if (filter === "SUBMENU_4") {
+    return <Submenu4 />;
+  }
+
   const filtered =
     filter === "ALL" ? List : List.filter((item) => item.year === filter);
   return (
