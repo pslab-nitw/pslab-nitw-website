@@ -21,6 +21,7 @@ function TabList(props) {
               key={index}
               ref={(el) => (listRef.current[index] = el)}
               onItemClick={props.handleItemClick}
+              activeFilter={props.publicationFilter}
             />
           );
         }

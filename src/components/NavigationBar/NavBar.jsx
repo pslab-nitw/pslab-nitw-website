@@ -21,9 +21,17 @@ function NavBar(props) {
     };
   }, []);
   return listMenuRequired ? (
-    <MinNavBar handleItemClick={props.handleItemClick} tabno={props.tabno} />
+    <MinNavBar
+      handleItemClick={props.handleItemClick}
+      tabno={props.tabno}
+      publicationFilter={props.publicationFilter}
+    />
   ) : (
-    <MaxNavBar handleItemClick={props.handleItemClick} tabno={props.tabno} />
+    <MaxNavBar
+      handleItemClick={props.handleItemClick}
+      tabno={props.tabno}
+      publicationFilter={props.publicationFilter}
+    />
   );
 }
 export default NavBar;

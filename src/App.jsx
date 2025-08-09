@@ -60,7 +60,7 @@ function App() {
 
   return (
     <div>
-      <NavBar handleItemClick={handleTabClick} tabno={tabNo} />
+      <NavBar handleItemClick={handleTabClick} tabno={tabNo} publicationFilter={publicationFilter} />
       {renderComponent()}
       <Footer />
     </div>
