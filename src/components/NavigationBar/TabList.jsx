@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import Tab from "./Tab";
 import TabNameList from "./TabNameList";
+import PublicationsDropdown from "./PublicationsDropdown";
 function TabList(props) {
   const listRef = useRef([]);
   useEffect(() => {
@@ -13,15 +14,26 @@ function TabList(props) {
   }, [props.tabno]);
   return (
     <ul className="tab-list">
-      {TabNameList.map((item, index) => (
-        <Tab
-          key={index}
-          id={index}
-          ref={(el) => (listRef.current[index] = el)}
-          content={item}
-          onItemClick={props.handleItemClick}
-        />
-      ))}
+      {TabNameList.map((item, index) => {
+        if (item === "Publications") {
+          return (
+            <PublicationsDropdown
+              key={index}
+              ref={(el) => (listRef.current[index] = el)}
+              onItemClick={props.handleItemClick}
+            />
+          );
+        }
+        return (
+          <Tab
+            key={index}
+            id={index}
+            ref={(el) => (listRef.current[index] = el)}
+            content={item}
+            onItemClick={props.handleItemClick}
+          />
+        );
+      })}
     </ul>
   );
 }
