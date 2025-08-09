@@ -10,6 +10,7 @@ function MenuList(props) {
   const menuRef = useRef(null);
   const fabRef = useRef(null);
   const [isDisplaying, setDisplaying] = useState(false);
+  const [showPublicationsSubmenu, setShowPublicationsSubmenu] = useState(false);
   function handleMenuClick() {
     if (menuRef.current && isDisplaying) {
       fabRef.current.style.animation = "0.5s buttonRotate-90";
@@ -54,15 +55,53 @@ function MenuList(props) {
       {isDisplaying && (
         <div className="menu" ref={(el) => (menuRef.current = el)}>
           <ul className="menu-list">
-            {TabNameList.map((item, index) => (
-              <MenuItem
-                key={index}
-                id={index}
-                ref={(el) => (listRef.current[index] = el)}
-                content={item}
-                onItemClick={handleItemClick}
-              />
-            ))}
+            {TabNameList.map((item, index) => {
+              if (item === "Publications") {
+                return (
+                  <li
+                    key={index}
+                    ref={(el) => (listRef.current[index] = el)}
+                    className="tab-name"
+                    onClick={() => setShowPublicationsSubmenu((p) => !p)}
+                  >
+                    Publications ▾
+                    {showPublicationsSubmenu && (
+                      <ul className="submenu">
+                        {[
+                          { label: "submenu 1", value: "ALL" },
+                          { label: "submenu 2", value: "SUBMENU_2" },
+                          { label: "submenu 3", value: "SUBMENU_3" },
+                          { label: "submenu 4", value: "SUBMENU_4" },
+                        ].map((opt) => (
+                          <li
+                            key={opt.value}
+                            className="submenu-item"
+                            onClick={(e) => {
+                              e.stopPropagation();
+                              props.handleItemClick(3, {
+                                publicationFilter: opt.value,
+                              });
+                              handleMenuClick();
+                            }}
+                          >
+                            {opt.label}
+                          </li>
+                        ))}
+                      </ul>
+                    )}
+                  </li>
+                );
+              }
+              return (
+                <MenuItem
+                  key={index}
+                  id={index}
+                  ref={(el) => (listRef.current[index] = el)}
+                  content={item}
+                  onItemClick={handleItemClick}
+                />
+              );
+            })}
           </ul>
         </div>
       )}

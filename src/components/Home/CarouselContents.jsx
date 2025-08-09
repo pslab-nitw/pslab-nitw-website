@@ -1,4 +1,3 @@
-import React from "react";
 const CarouselContents = [
   {
     img: "/images/carousel/Satish_et.al-2025.jpg",

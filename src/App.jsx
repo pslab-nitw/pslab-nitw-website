@@ -13,8 +13,12 @@ import Research from "./components/Research/Research";
 function App() {
   const [tabNo, setTabNo] = useState(0);
   const tabsRef = useRef([]);
+  const [publicationFilter, setPublicationFilter] = useState("ALL");
 
-  function handleTabClick(index) {
+  function handleTabClick(index, options = {}) {
+    if (typeof options.publicationFilter !== "undefined") {
+      setPublicationFilter(options.publicationFilter);
+    }
     if (tabsRef.current[tabNo]) {
       tabsRef.current[tabNo].style.animationName = "fadeOut";
     }
@@ -35,7 +39,7 @@ function App() {
       <Home />,
       <Members />,
       <Research handleClick={handleTabClick} />,
-      <Publications />,
+      <Publications filter={publicationFilter} />,
       <Projects />,
       <Alumni />,
       <Gallery />,
@@ -56,7 +60,7 @@ function App() {
 
   return (
     <div>
-      <NavBar handleItemClick={handleTabClick} tabno={tabNo} />
+      <NavBar handleItemClick={handleTabClick} tabno={tabNo} publicationFilter={publicationFilter} />
       {renderComponent()}
       <Footer />
     </div>

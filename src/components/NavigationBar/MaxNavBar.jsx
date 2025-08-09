@@ -11,7 +11,7 @@ function MaxNavBar(props) {
         />
         <Title />
       </div>
-      <TabList handleItemClick={props.handleItemClick} tabno={props.tabno}/>
+      <TabList handleItemClick={props.handleItemClick} tabno={props.tabno} publicationFilter={props.publicationFilter}/>
     </div>
   );
 }

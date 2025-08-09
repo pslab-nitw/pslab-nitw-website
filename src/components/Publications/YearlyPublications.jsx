@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import SinglePublication from "./SinglePublication";
 function YearlyPublications(props) {
   const [isClicked, setIsClicked] = useState(false);
@@ -17,7 +17,7 @@ function YearlyPublications(props) {
       >
         {props.year}
       </h1>
-      <ol style={{ maxHeight: isClicked ? "2000px" : "0" }}>
+      <ol style={{ maxHeight: isClicked ? "100000px" : "0" }}>
         {props.publications.map((item, index) => (
           <li key={index}>
             <SinglePublication
