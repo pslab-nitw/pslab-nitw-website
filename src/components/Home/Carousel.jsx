@@ -1,13 +1,14 @@
-import React, { useState, useEffect, useRef } from "react";
-import CarouselContents from "./CarouselContents";
-import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
+import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
+import { useEffect, useRef, useState } from "react";
+import CarouselContents from "./CarouselContents";
 function Carousel() {
   const [ind, setInd] = useState(0);
   const leftImgRef = useRef(null);
   const imgRef = useRef(null);
   const rightImgRef = useRef(null);
   const txtRef = useRef(null);
+  const titleRef = useRef(null);
   function handleDotClick(index) {
     if (index > ind) {
       getNextImage(index - 1);
@@ -21,8 +22,10 @@ function Carousel() {
       imgRef.current.style.animationName = "decWidth";
       rightImgRef.current.style.animationName = "incWidth";
       txtRef.current.style.animationName = "fadeOut";
+      titleRef.current.style.animationName = "fadeOut";
       setTimeout(() => {
         txtRef.current.style.animationName = "fadeIn";
+        titleRef.current.style.animationName = "fadeIn";
         setInd(new_index);
       }, 500);
     }
@@ -35,9 +38,11 @@ function Carousel() {
       imgRef.current.style.animationName = "decWidthRight";
       leftImgRef.current.style.animationName = "incWidth";
       txtRef.current.style.animationName = "fadeOut";
+      titleRef.current.style.animationName = "fadeOut";
       setTimeout(() => {
         setInd(new_index);
         txtRef.current.style.animationName = "fadeIn";
+        titleRef.current.style.animationName = "fadeIn";
       }, 500);
     }
   }
@@ -110,7 +115,8 @@ function Carousel() {
         </ul>
       </div>
       <div className="carousel-text">
-        <p ref={(el) => (txtRef.current = el)}>{CarouselContents[ind].text}</p>
+        <h1 className="carousel-title" ref={(el) => (titleRef.current = el)}>{CarouselContents[ind].title}</h1>
+        <p className="carousel-para" ref={(el) => (txtRef.current = el)}>{CarouselContents[ind].text}</p>
       </div>
     </div>
   );

@@ -1,6 +1,7 @@
-import React from "react";
 import Card from "./Card";
-import List from "./List";
+import AlumniList from "./List";
+import PGList from "./PGList";
+import UGList from "./UGList";
 function Alumni() {
   return (
     <div className="alumni">
@@ -8,7 +9,7 @@ function Alumni() {
         <h1>Alumni</h1>
       </div>
       <div className="flex-container">
-        {List.map((item, index) => (
+        {AlumniList.map((item, index) => (
           <Card
             key={index}
             img={item.img}
@@ -16,6 +17,22 @@ function Alumni() {
             event={item.event}
             current={item.current}
           />
+        ))}
+      </div>
+      <div className="title">
+        <h1>Post Graduates</h1>
+      </div>
+      <div className="flex-container-2">
+        {PGList.map((item, index) => (
+          <p>{item.name} - {item.branch} - batch of {item.year}</p>
+        ))}
+      </div>
+      <div className="title">
+        <h1>Under Graduates</h1>
+      </div>
+      <div className="flex-container-2">
+        {UGList.map((item, index) => (
+          <p>{item.name} - {item.branch} - batch of {item.year}</p>
         ))}
       </div>
     </div>

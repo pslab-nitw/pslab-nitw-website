@@ -1,7 +1,6 @@
-import React from "react";
 import Card from "./Card";
-import Professor from "./Professor";
 import PhD from "./PhD";
+import Professor from "./Professor";
 function Members() {
   return (
     <div className="members">
@@ -20,7 +19,7 @@ function Members() {
           email={Professor.email}
         />
       </div>
-      <h1 className="title">PhD Scholars</h1>
+      <h1 className="title">Lab Members</h1>
       <h3 className="underscore">___</h3>
       <div className="flex-container">
         {PhD.map((item, index) => (

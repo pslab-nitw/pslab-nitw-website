@@ -1,4 +1,3 @@
-import React from "react";
 import TabList from "./TabList";
 import Title from "./Title";
 function MaxNavBar(props) {

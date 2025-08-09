@@ -1,4 +1,3 @@
-import React from "react";
 const List = [
   {
     img: "https://static.wixstatic.com/media/b862f1_cd06a4292b234dadb427db91be55dc4b~mv2.jpeg/v1/crop/x_8,y_0,w_783,h_800/fill/w_349,h_356,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/1627998458331.jpeg",

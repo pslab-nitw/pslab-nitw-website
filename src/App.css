@@ -29,8 +29,14 @@
   }
 }
 body {
+  background-color: rgb(144, 206, 197);
   margin: 0;
 }
+html, body {
+  overscroll-behavior: none;
+  overflow-x: hidden;
+}
+
 #root {
   background-color: rgb(144, 206, 197);
 }
@@ -173,7 +179,7 @@ body {
   font-weight: 400;
   color: black;
   opacity: 0.7;
-  magin: 0;
+  margin: 0;
   margin-bottom: 50px;
 }
 .home > .carousel {
@@ -236,12 +242,19 @@ body {
   }
 }
 .carousel .carousel-text {
-  overflow-y: auto;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: start;
   align-items: center;
 }
-
+.carousel-title {
+  font-size: 1.7rem;
+  margin-top: 40px;
+  min-width: 30%;
+}
+.carousel-para {
+  overflow-y: auto;
+}
 .carousel p {
   font-size: 1.3rem;
   width: 80%;
@@ -525,6 +538,19 @@ body {
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
+}
+.flex-container-2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+.flex-container-2 p {
+  /* border-bottom: 2px solid black;
+  border-right: 2px solid black; */
+  margin: 7px 0;
+  font-weight: 300;
+  font-size: 1.7rem;
 }
 .publications {
   display: flex;
