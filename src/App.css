@@ -529,10 +529,10 @@ html, body {
     font-size: 1.7rem;
     text-align: center;
   }
-  .mentor-description h1 {
+  .mentor-description h2 {
     font-size: 1.5rem;
   }
-  .mentor-description h1 {
+  .mentor-description p {
     
   }
   .mentor-description > .left {
@@ -541,14 +541,17 @@ html, body {
     padding: 0;
   }
   .mentor-description > .right {
+    display: flex;
+    aspect-ratio: 1 / 1;
+    justify-content: center;
     flex: none;
-    min-width: fit-content;
-    min-height: 300px;
+    width: 96%;
   }
   .mentor-description  img {
-    margin: auto auto;
-    width: 300px;
-    height: 300px;
+    display: block;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
   }
   .mentor-description p {
     font-size: 1.2rem;
