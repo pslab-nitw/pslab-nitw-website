@@ -1,10 +1,12 @@
-import React from "react";
 import EmailIcon from "@mui/icons-material/Email";
-function Card(props) {
+
+export default function Card(props) {
+  const className = `card-container ${props.vertical ? "vertical" : ""}`.trim();
+
   return (
-    <div className="card-container">
+    <div className={className}>
       <div className="img-container">
-        <img src={props.img} />
+        <img src={props.img} alt={props.name} />
       </div>
       <div className="about">
         <div className="name-box">
@@ -42,4 +44,3 @@ function Card(props) {
     </div>
   );
 }
-export default Card;

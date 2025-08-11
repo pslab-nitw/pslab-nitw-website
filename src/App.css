@@ -574,6 +574,11 @@ html, body {
   margin: 0;
   margin-top: -30px;
 }
+@media(max-width:500px) {
+  .members .title {
+    font-size: 2rem;
+  }
+}
 .alignment-box {
   display: flex;
   justify-content: center;
@@ -589,10 +594,26 @@ html, body {
   border-right: 5px solid rgba(255, 255, 255, 0.3);
   border-bottom: 5px solid rgba(255, 255, 255, 0.3);
 }
+.flex-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
 @media(max-width:1000px) {
+  .alignment-box,.flex-container {
+    width: 80vw;
+    margin: 0 auto;
+  }
+  .flex-container {
+    margin: 6.5vw;
+  }
   .card-container{
     min-height: 20vh;
     width: 40vw;
+  }
+  .outer-container{
+    width: 100%;
+    margin: 0;
   }
 }
 .img-container {
@@ -675,10 +696,60 @@ html, body {
   color: black;
 }
 
-.flex-container {
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
+
+@media (max-width: 500px) {
+  .card-container {
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    margin: 20px auto;
+  }
+
+  .img-container {
+    width: 100%;
+    height: 60%;
+  }
+
+  .img-container > img {
+    border-radius: 10px 10px 0 0;
+    height: 100%;
+    width: 100%;
+    aspect-ratio: 1/1;
+  }
+
+  .card-container > .about {
+    width: 100%;
+    height: 40%;
+    box-shadow: none;
+    border-radius: 0 0 10px 10px; 
+    min-height: auto;
+  }
+
+  .card-container > .about::before {
+    border-radius: 0 0 10px 10px;
+  }
+
+  .card-container .name-box,
+  .card-container .ORC-box,
+  .card-container .mail-box {
+    position: static;
+    margin-left: 0;
+  }
+
+  .card-container > .about > * {
+    margin-left: 10px;
+    margin-top: 8px;
+  }
+
+  .card-container .mail {
+    position: relative;
+    top: 0;
+    margin-top: 0;
+    vertical-align: middle;
+  }
+  .card-container .name-box h1 {
+    font-size: 1.5rem;
+  }
 }
 .flex-container-2 {
   display: flex;
@@ -687,8 +758,6 @@ html, body {
   justify-content: space-around;
 }
 .flex-container-2 p {
-  /* border-bottom: 2px solid black;
-  border-right: 2px solid black; */
   margin: 7px 0;
   font-weight: 300;
   font-size: 1.7rem;
