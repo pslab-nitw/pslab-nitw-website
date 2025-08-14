@@ -22,5 +22,16 @@ const PhD = [
     rhs: "Protein Biochemistry of Infectious diseases",
     email: "gs23btr1r02@student.nitw.ac.in",
   },
+  // {
+  //   img: "/images/Aheli.webp",
+  //   name: "Aheli Pradhan",
+  //   designation: "Mtech. Scholar",
+  //   ORCid: "ORCid",
+  //   orcUrl: "https://orcid.org/0009-0007-2246-2942",
+  //   ORCvalue: "0009-0007-2246-2942",
+  //   lhs: "Research Area",
+  //   rhs: "Maggi Cookingology",
+  //   email: "ap24btm1s02@student.nitw.ac.in",
+  // },
 ];
 export default PhD;

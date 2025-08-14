@@ -713,6 +713,7 @@ html, body {
   pointer-events: none;
 }
 .card-container > .about h1 {
+  font-family: 'MD Serif Text';
   font-size: 30px;
 }
 .card-container .name-box {
@@ -735,7 +736,17 @@ html, body {
   position: absolute;
   bottom: 20px;
 }
+
+.card-container .mail-box a {
+  font-family: 'MD Serif Text';
+  font-size: 1.2rem !important;
+  font-weight: 600;
+  text-decoration: none;
+}
+
 .card-container .ORC-box {
+  font-family: 'MD Serif Text';
+  font-size: 1rem;
   position: absolute;
   top: 150px;
 }
@@ -780,7 +791,7 @@ html, body {
     margin-top: 20px;
     box-shadow: none;
     background: none;
-    background-color: rgba(164, 225, 216, 0.531);
+    background-color: #dfd2b5;
     border: 5px solid rgba(255, 255, 255, 0.3);
     box-shadow: 0 8px 16px -8px rgba(0,0,0,0.8);
   }
@@ -800,6 +811,7 @@ html, body {
     object-fit: cover;
     object-position: 20% 10%;
   }
+  
 
   .card-container > .about {
     width: 100%;
@@ -861,6 +873,15 @@ html, body {
   font-weight: 200;
   font-size: 1.6rem;
 }
+@media(max-width:500px) {
+  .flex-container-2 p {
+    text-align: center;
+    line-height: 10px;
+    font-size: 0.8rem;
+    font-weight: 300;
+  }
+}
+
 .publications {
   display: flex;
   flex-direction: column;
@@ -890,6 +911,7 @@ html, body {
   margin-bottom: 20px;
   width: 68vw;
 }
+
 .publications .list-container ol {
   transition: max-height 1s ease;
 }
@@ -996,6 +1018,13 @@ html, body {
   text-align: center;
   font-size: 2.2rem;
 }
+@media(max-width:500px) {
+  .alumni .title {
+    font-size: 1rem;
+    text-align: center;
+  }
+}
+
 .alumni .card {
   height: 500px;
   width: 300px;
