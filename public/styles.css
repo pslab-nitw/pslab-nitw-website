@@ -32,7 +32,7 @@ body {
   margin: 0;
 }
 #root {
-  background-color: rgb(144, 206, 197);
+  background-color: #90CEC5;
 }
 .tabs {
   animation-name: fadeIn;
