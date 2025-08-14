@@ -970,6 +970,8 @@ html, body {
   overflow-y: hidden;
   margin-top: 30px;
   margin-bottom: 20px;
+      display: flex;
+      flex-direction: column;
   width: 68vw;
 }
 
@@ -980,6 +982,7 @@ html, body {
   margin-left: 5px;
   font-size: 2.9rem;
   transition: margin-left 1s ease;
+  align-self: center;
 }
 .publications .list-container ol {
   margin-top: 0;
