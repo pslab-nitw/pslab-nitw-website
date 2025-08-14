@@ -77,10 +77,10 @@ function MenuList(props) {
                       {showPublicationsSubmenu && (
                         <ul className="submenu">
                           {[
-                            { label: "submenu 1", value: "ALL" },
-                            { label: "submenu 2", value: "SUBMENU_2" },
-                            { label: "submenu 3", value: "SUBMENU_3" },
-                            { label: "submenu 4", value: "SUBMENU_4" },
+                            { label: "Journal Articles", value: "ALL" },
+                            { label: "Book Chapters", value: "SUBMENU_2" },
+                            { label: "Books", value: "SUBMENU_3" },
+                            { label: "Patents", value: "SUBMENU_4" },
                           ].map((opt) => (
                             <li
                               key={opt.value}

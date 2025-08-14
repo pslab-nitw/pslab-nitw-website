@@ -126,8 +126,45 @@ html, body {
   position: fixed;
   right: 5vw;
   top: 5vh;
+  width: 10vw !important;
+  height: 10vw !important;
+  border-radius: 50% !important;
+  padding: 0 !important;
   animation-duration: 0.5s;
 }
+/* keep a responsive but bounded size and guarantee a perfect circle */
+.fab-button.MuiFab-root {
+  /* responsive size that won't explode or disappear */
+  --fab-size: clamp(48px, 13vw, 96px);
+
+  position: fixed;
+  right: 5vw;
+  top: 5vh;
+
+  width: var(--fab-size) !important;
+  height: var(--fab-size) !important;
+
+  min-width: 0 !important;    /* override MUI's min-width */
+  min-height: 0 !important;   /* override MUI's min-height */
+  padding: 0 !important;      /* remove extra padding that distorts shape */
+
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50% !important; /* force circle */
+  box-sizing: border-box !important;
+  overflow: hidden;
+
+  animation-duration: 0.5s;
+}
+
+/* make the icon scale nicely inside the circle */
+.fab-button.MuiFab-root .MuiSvgIcon-root {
+  font-size: calc(var(--fab-size) * 0.45) !important;
+  line-height: 1 !important;
+}
+
 @media(max-width:500px) {
   .fab-button{
     right: 2vw;
@@ -261,6 +298,7 @@ html, body {
   display: flex;
   width: 80vw;
   height: 600px;
+  border-radius: 5%;
 }
 
 
@@ -269,12 +307,29 @@ html, body {
   height: 600px;
   flex: 1;
 }
-
+.home > .carousel .slider {
+  border-bottom-left-radius: 5%;
+  border-top-left-radius: 5%;
+}
+.home > .carousel .carousel-text{
+  border-bottom-right-radius: 5%;
+  border-top-right-radius: 5%;  
+}
 @media(max-width:500px) {
   .home > .carousel {
     width:90vw;
   }
   .carousel div {
+  }
+  .home > .carousel .slider {
+    border-radius: 0;
+    border-top-right-radius: 5%;
+    border-top-left-radius: 5%;
+  }
+  .home > .carousel .carousel-text{
+    border-radius: 0;
+    border-bottom-right-radius: 5%;
+    border-bottom-left-radius: 5%;  
   }
 }
 .carousel .slider {
@@ -898,6 +953,7 @@ html, body {
 }
 .publications .title {
   background-color: white;
+  min-width: fit-content;
   width: 60vw;
   position: relative;
   bottom: 200px;
@@ -947,6 +1003,28 @@ html, body {
 .publications .list-container ol > li a {
   color: black;
   font-size: 2rem;
+}
+@media(max-width:500px) {
+  .publications .title{
+    margin-left: 0;
+    width: 80vw;
+    padding: 0;
+    transform: translateY(40%);
+    margin-bottom: 10%;
+  }
+  .publications .list-container {
+      display: flex;
+      flex-direction: column;
+      width: 90vw;
+      overflow-x: hidden;
+  }
+  .publications .list-container .year {
+    align-self: center;
+    margin: 0;
+  }
+  .publications .list-container {
+    font-size: 1rem;
+  }
 }
 .research {
   display: flex;

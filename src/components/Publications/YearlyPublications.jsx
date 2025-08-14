@@ -12,7 +12,6 @@ function YearlyPublications(props) {
     >
       <h1
         onClick={manageClick}
-        style={{ marginLeft: isClicked ? "5px" : "45%" }}
         className="year"
       >
         {props.year}
