@@ -1,21 +1,16 @@
 const PGList = [
   {
-    name: "placeholder",
+    name: "Nupoor Patil",
     branch: "M.Tech Biotechnology",
-    year: "2020"
+    year: "2023"
   },
   {
-    name: "double placeholder",
+    name: "Neharika Gupta",
     branch : "M.Tech Biotechnology",
-    year : "2021"
+    year : "2022"
   },
   {
-    name: "triple length placeholder",
-    branch : "M.Tech Biotechnology",
-    year : "2024"
-  },
-  {
-    name: "double placeholder",
+    name: "Riya Sahu",
     branch : "M.Tech Biotechnology",
     year : "2021"
   },

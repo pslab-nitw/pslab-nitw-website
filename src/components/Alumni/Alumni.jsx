@@ -20,19 +20,19 @@ function Alumni() {
         ))}
       </div>
       <div className="title">
-        <h1>Post Graduates</h1>
+        <h1>Post Graduate Students</h1>
       </div>
       <div className="flex-container-2">
         {PGList.map((item, index) => (
-          <p key={index}>{item.name} - {item.branch} - batch of {item.year}</p>
+          <p key={index}>{item.name} - {item.branch} - Batch of {item.year}</p>
         ))}
       </div>
       <div className="title">
-        <h1>Under Graduates</h1>
+        <h1>Under Graduate Students</h1>
       </div>
       <div className="flex-container-2">
         {UGList.map((item, index) => (
-          <p key={index}>{item.name} - {item.branch} - batch of {item.year}</p>
+          <p key={index}>{item.name} - {item.branch} - Batch of {item.year}</p>
         ))}
       </div>
     </div>
