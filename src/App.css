@@ -963,7 +963,7 @@ html, body {
   margin-top: -180px;
 }
 .publications .title h1 {
-  font-size: 3rem;
+  font-size: 3.4rem;
   text-align: center;
 }
 .publications .list-container {
@@ -983,6 +983,7 @@ html, body {
   font-size: 2.9rem;
   transition: margin-left 1s ease;
   align-self: center;
+  cursor: pointer;
 }
 .publications .list-container ol {
   margin-top: 0;
@@ -993,27 +994,36 @@ html, body {
   margin-bottom: 30px;
 }
 .publications .list-container ol > li::marker {
-  font-size: 27px;
+  font-size: 2rem;
+  font-weight: 700;
 }
 .publications .list-container ol > li div * {
   line-height: 1.5;
   margin: 0;
 }
-.publications .list-container ol > li h2 {
+.publications .list-container ol > li h1 {
   font-size: 2rem;
+  font-weight: 700;
+}
+.publications .list-container ol > li h2 {
+  font-size: 1.7rem;
   font-weight: 500;
 }
 .publications .list-container ol > li a {
   color: black;
-  font-size: 2rem;
+  font-size: 1.7rem;
 }
 @media(max-width:500px) {
   .publications .title{
+    margin-top: 2%;
     margin-left: 0;
     width: 80vw;
     padding: 0;
     transform: translateY(40%);
     margin-bottom: 10%;
+  }
+  .publications .title h1{
+    font-size: 2.2rem;
   }
   .publications .list-container {
       display: flex;
@@ -1022,11 +1032,34 @@ html, body {
       overflow-x: hidden;
   }
   .publications .list-container .year {
+    font-size: 2rem;
+    margin-top: 20px;
+    margin-bottom: 10px;
     align-self: center;
-    margin: 0;
+    /* margin: 0; */
   }
   .publications .list-container {
+    min-height: 2;
     font-size: 1rem;
+  }
+  .publications .list-container ol {
+    padding-left: 15px;
+  }
+  .publications .list-container ol > li::marker {
+    font-size: 1.1rem;
+    font-weight: 700; 
+  }
+  .publications .list-container ol > li h1 {
+    font-size: 1.1rem;
+    font-weight: 700; 
+  }
+  .publications .list-container ol > li h2 {
+    font-size: 0.9rem;
+    font-weight: 500; 
+  }
+  .publications .list-container ol > li a {
+    color: black;
+    font-size: 0.9rem;
   }
 }
 .research {
