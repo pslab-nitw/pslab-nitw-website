@@ -1,4 +1,3 @@
-import React from "react";
 const TabNameList = [
   "Home",
   "Members",
@@ -7,6 +6,5 @@ const TabNameList = [
   "Projects",
   "Alumni",
   "Gallery",
-  "Contact",
 ];
 export default TabNameList;

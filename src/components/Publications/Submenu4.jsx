@@ -1,12 +1,22 @@
-import React from "react";
-
-function Submenu4() {
-  return (
-    <div>
-      <h2>Submenu 4</h2>
-      <p>Coming soon: Content for submenu 4.</p>
-    </div>
-  );
+import List from "./List";
+import YearlyPublications from "./YearlyPublications";
+const submenu1 = () => {
+  return <>
+      <img src="https://static.wixstatic.com/media/ad420a_f98d68876fc145f595d999cec41dda12~mv2.jpg/v1/fill/w_1699,h_539,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/ad420a_f98d68876fc145f595d999cec41dda12~mv2.jpg" />
+      <div className="title">
+        <h1>Patents</h1>
+      </div>
+      <div className="list">
+          {(List.map((item, index) => (
+            <YearlyPublications
+              key={index}
+              year={item.year}
+              publications={item.publications}
+            />
+          ))
+        )}
+      </div>
+  </>
 }
 
-export default Submenu4;
+export default submenu1

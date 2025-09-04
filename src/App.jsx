@@ -1,7 +1,6 @@
 import { useRef, useState } from "react";
 import "./App.css";
 import Alumni from "./components/Alumni/Alumni";
-import Contact from "./components/Contact/Contact";
 import Footer from "./components/Footer/Footer";
 import Gallery from "./components/Gallery/Gallery";
 import Home from "./components/Home/Home";
@@ -43,7 +42,6 @@ function App() {
       <Projects />,
       <Alumni />,
       <Gallery />,
-      <Contact />,
     ];
 
     return components.map((Component, index) => (

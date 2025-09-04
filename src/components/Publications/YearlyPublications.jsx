@@ -16,7 +16,7 @@ function YearlyPublications(props) {
       >
         {props.year}
       </h1>
-      <ol style={{ maxHeight: isClicked ? "100000px" : "0" }}>
+      <ol style={{ height : "fit-content"}}>
         {props.publications.map((item, index) => (
           <li key={index}>
             <SinglePublication
