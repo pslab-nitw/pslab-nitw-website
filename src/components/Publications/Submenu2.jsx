@@ -1,4 +1,4 @@
-import List from "./List";
+import List from "./List2";
 import YearlyPublications from "./YearlyPublications";
 const submenu1 = () => {
   return <>

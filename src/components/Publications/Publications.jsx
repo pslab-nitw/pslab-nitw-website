@@ -1,4 +1,3 @@
-import List from "./List";
 import Submenu2 from "./Submenu2";
 import Submenu3 from "./Submenu3";
 import Submenu4 from "./Submenu4";
@@ -8,7 +7,6 @@ function Publications({ filter = "ALL" }) {
   const isSubmenu3 = filter === "SUBMENU_3";
   const isSubmenu4 = filter === "SUBMENU_4";
 
-  const filtered = filter === "ALL" ? List : List.filter((item) => item.year === filter);
 
   return (
     <div className="publications">
