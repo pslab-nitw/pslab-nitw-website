@@ -564,6 +564,7 @@ body {
   transition: margin-left 1s ease;
 }
 .publications .list-container ol {
+  text-align: justify;
   margin-top: 0;
   margin-bottom: 0;
   margin-left: 20px;
