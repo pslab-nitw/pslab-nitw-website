@@ -1404,7 +1404,7 @@ html, body {
 .project-card h1{
   font-weight: 400;
   margin: 0;
-  margin-bottom: 2  px;
+  margin-bottom: 2px;
 }
 .project-card a{
   font-weight: 800;
@@ -1433,7 +1433,7 @@ html, body {
 }
 
 .book-details{
-  font-size: 2.5rem;
+  font-size: 2rem !important;
   line-height: 138%;
   padding-left: 5vw;
 }

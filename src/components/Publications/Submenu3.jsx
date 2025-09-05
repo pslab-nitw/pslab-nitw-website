@@ -9,7 +9,7 @@ const submenu1 = () => {
       <div className="book-container">
           {List.map((item, index) => (
             <BookCard 
-              key={index}
+              key={index} 
               img={item.img}
               title={item.title}
               Editors={item.Editors}
@@ -17,7 +17,7 @@ const submenu1 = () => {
               Year={item.Year}
               Pages={item.Pages}
               Print_ISBN={item.Print_ISBN}
-              Print_ISBN_prefix={item.Print_ISBN_suffix}
+              Print_ISBN_suffix={item.Print_ISBN_suffix}
               eBook_ISBN={item.eBook_ISBN}
               eBook_ISBN_suffix={item.eBook_ISBN_suffix}
               DOI={item.DOI}            

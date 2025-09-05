@@ -33,7 +33,7 @@ const BookList = [
         Year : 2019,
         Pages: 142,
         Print_ISBN: "1925823709",
-        eBook_ISBN_suffix: "10",
+        Print_ISBN_suffix: "10",
         eBook_ISBN: "978-1925823707",
         eBook_ISBN_suffix: "13",
         DOI: "https://doi.org/10.1016/C2021-0-01551-0",
