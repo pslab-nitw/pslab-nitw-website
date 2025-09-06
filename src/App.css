@@ -1375,11 +1375,13 @@ html, body {
   align-items: center;
 }
 .project-page-title{
+  align-items: center;
 }
 .project-page-title h1{
   background-color: white;
-  width: fit-content;
-  padding: 1rem 15rem;
+  text-align: center;
+  width: 60vw;
+  padding: 60px 0px;
   margin: 0 auto;
   transform: translateY(-50%);
   font-size: 3.5rem;
@@ -1392,19 +1394,49 @@ html, body {
 }
 
 .project .project-card {
-    background-color: rgba(255, 255, 255, 0.497);
-    min-width: 60vw;
+    background-color: rgba(245, 245, 245, 0.7);
+    max-width: 60vw;
     display: flex;
     flex-direction: column;
     align-items: start;
-    padding: 5vh 0;
+    padding: 3.5vh 0;
     padding-left: 2vw;
+    padding-right: 2vw;
     margin-bottom: 2vh;
+    font-size: 13.5px;
 }
+
+@media(max-width:500px) {
+
+  .project .project-card {
+    display: flex;
+    min-width: 90%;
+    max-width: 90%;
+    margin-left: 10px;
+    margin-right: 10px;
+    font-size: 8.3px;
+    padding: 12px 5px 10px 5px;
+  }
+
+  .project .project-card h1{
+    padding-left: 10px;
+
+  }
+
+
+  .project-page-title h1{
+    margin-bottom: -10px;
+    padding: 20px 0;
+    font-size: 2.2rem;
+    width: 80vw;
+    transform: translateY(-70%);
+  }
+}
+
 .project-card h1{
   font-weight: 400;
   margin: 0;
-  margin-bottom: 2px;
+  margin-bottom: 7px;
 }
 .project-card a{
   font-weight: 800;
@@ -1426,8 +1458,9 @@ html, body {
 }
 
 .book-image {
-  
+  margin-left: 100px;
 }
+
 .book-image img{
   width: 19vw;
 }
