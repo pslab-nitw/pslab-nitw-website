@@ -2,7 +2,7 @@ import Carousel from "./Carousel";
 function Home() {
   return (
     <div className="home">
-      <h1 className="title">Prakash Saudagar Lab @ NITW</h1>
+      <h1 className="title">Infectious Diseases Research Laboratory (PS Lab)</h1>
       <h1 className="dept">Department of Biotechnology</h1>
       <Carousel />
       <div className="reasearch-description">
