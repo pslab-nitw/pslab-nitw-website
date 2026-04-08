@@ -1,5 +1,5 @@
 import React from "react";
-const M.Tech = [
+const MTech = [
   {
     img: "",
     name: "Aheli",
@@ -11,4 +11,4 @@ const M.Tech = [
     rhs: "Cellular & Molecular biology of infectious diseases",
     email: "cr22btr1r03@student.nitw.ac.in",
   },
-  export default M.Tech;
+  export default MTech;
