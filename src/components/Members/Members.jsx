@@ -1,6 +1,7 @@
 import Card from "./Card";
 import PhD from "./PhD";
 import Professor from "./Professor";
+import Mtech from "./M.Tech";
 function Members() {
   return (
     <div className="members">
@@ -35,6 +36,24 @@ function Members() {
             rhs={item.rhs}
             email={item.email}
           />
+        ))}
+      </div>
+      <h1 className="title">M.Tech Students</h1>
+      <h3 className="underscore">___</h3>
+      <div className="flex-container">
+        {MTech.map((item, index) => (
+          <Card
+            key={index}
+            img={item.img}
+            name={item.name}
+            designation={item.designation}
+            ORCid={item.ORCid}
+            orcUrl={item.orcUrl}
+            ORCvalue={item.ORCvalue}
+            lhs={item.lhs}
+            rhs={item.rhs}
+            email={item.email}
+            />
         ))}
       </div>
     </div>
